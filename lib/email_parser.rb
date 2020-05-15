@@ -13,6 +13,7 @@ attr_accessor :email
 
   def parse
     @email.split("/[, ]/").uniq
+    @email.reject {|space| space.empty?}
 # binding.pry
   end
 end
